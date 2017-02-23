@@ -1,0 +1,84 @@
+body{
+	background-color:rgba(211, 173, 204, 0.61);
+}
+.navlink{
+	
+	margin:0 10px;
+	font-size:22px;
+	text-align:center;
+}
+.navlink .jm span{
+	color:red;
+	
+}
+.navlink li{
+	float:left;
+	margin-left:20px;
+	list-style:none;
+}
+.navlink li a{
+	padding-righ:5px;
+}
+.container{
+	word-wrap:break-word;
+}
+.col-md-9{
+	margin-left:0;
+}
+.search form{
+	margin:5px;				
+}
+.search form input{
+	width:80%;
+	padding:10px;
+}
+.search form .btn{
+	width:60px;
+	background:rgba(52, 211, 58, 0.52);
+	color:rgba(35, 60, 223, 0.73);
+	font-size:24px;
+	font-weight:bold;
+	padding:5px;
+}
+/*****/
+.blog-content{		
+	line-height:150%;
+	text-indent:2em;
+}
+.breadcrumb{
+	background:rgba(246, 231, 231, 0.48);
+}
+.well{
+	background:rgba(225, 234, 234, 0.69);
+}
+.siteInfo{	
+	height:50px;
+	text-align:center;	
+	margin-bottom:0px;
+	position: relative;
+	bottom: 0px;
+}
+/****/
+.top{
+	width:95%;		
+	margin:0 auto;	
+}
+.top .jumbotron{
+	background:#e4ccdf;
+	padding-top:21px;
+	padding-bottom:30px;
+	text-align:center;
+	border-radius: 4px;
+}
+
+/****/
+
+/****/
+@media screen and (max-width:1000px){
+	.col-md-9{
+		width:100%;
+	}
+	.col-md-3{
+		width:100%;
+	}
+}

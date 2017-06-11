@@ -52,7 +52,20 @@
 						<span class="time pull-right"><?php echo date('Y-m-d H:s:m',$blog['intime']);?></span>
 					</div>
 				</div>
-<?php endforeach;?>				
+<?php endforeach;?>		
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4">
+						<div class="page page-header">
+							<nav>
+								<ul class="pagination">
+									<?php echo $page;?>		   
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="col-md-4"></div>
+				</div>
 				</div>
 				<div class="col-md-4 ">
 					<?php include(THEME_PATH.'Common/sidebar.inc.php');?>		
@@ -63,19 +76,7 @@
               	时间：2016-11-10
               	描述：内容end
               -->		
-		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
-				<div class="page page-header">
-					<nav>
-						<ul class="pagination">
-						    <?php echo $page;?>		   
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<div class="col-md-4"></div>
-		</div>
+		
 		<div class="siteInfo">
 			<div class="siteInfo" ><?php echo html_entity_decode( $config["copyright"] ); ?></div>	
 		</div>

@@ -6,5 +6,6 @@
 		<title><?php $title = $blog['title'];if($title == null){echo $config['title'];}else{echo $title;};?></title>
 		<link rel="stylesheet" type="text/css" href="/Public/bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="/Public/main.css">
+		<link rel="stylesheet" href="/Public/style.css">
 		<script type="text/javascript" src="/Public/jquery.min.js"></script>
 		<script type="text/javascript" src="/Public/bootstrap/js/bootstrap.min.js"></script>	

@@ -7,7 +7,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="<?php echo U('/Home/Index/');?>"><img class="logo" src="/Public/logo.ico"/></a>
+					<a class="navbar-brand" href="<?php echo U('/Home/Index/');?>">BRISKLAN</a>
 				</div>		
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -16,38 +16,15 @@
 							<a href="<?php echo U('/Home/Index/');?>">首页<span class="sr-only">(current)</span></a>
 						</li>										
 					</ul>
-					<ul class="nav navbar-nav hidden">						
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">功能菜单 <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li >
-									<a href="<?php echo U('/Home/Index/');?>"><?php echo $config['join'];?><span class="sr-only">(current)</span></a>
-								</li>
-								<li >
-									<a href="<?php echo U('/Home/Index/');?>"><?php echo $config['huodong'];?><span class="sr-only">(current)</span></a>
-								</li>
-								<li >
-									<a href="<?php echo U('/Home/Index/');?>"><?php echo $config['software'];?><span class="sr-only">(current)</span></a>
-								</li>
-								<li >
-									<a href="<?php echo U('/Home/Index/');?>"><?php echo $config['system'];?><span class="sr-only">(current)</span></a>
-								</li>
-								<li >
-									<a href="<?php echo U('/Home/Index/');?>"><?php echo $config['phone'];?><span class="sr-only">(current)</span></a>
-								</li>
-								
-								<li >
-									<a href="<?php echo U('/Home/Index/');?>"><?php echo $config['message'];?><span class="sr-only">(current)</span></a>
-								</li>
-								<li >
-									<a href="<?php echo U('/Home/Msg/');?>"><?php echo $config['others'];?><span class="sr-only">(current)</span></a>
-								</li>
-							</ul>
+					
+					<ul class="nav navbar-nav">
+						<li >
+							<a href="<?php echo U('/Home/Mdc/');?>">医学知识</a>
 						</li>
 					</ul>
 					<ul class="nav navbar-nav">
 						<li >
-							<a href="<?php echo U('/Home/Mdc/');?>"><?php echo $config['answer'];?></a>
+							<a href="<?php echo U('/Home/Msg/');?>">在线留言</a>
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right ">						
@@ -66,7 +43,7 @@
 							</ul>
 						</li>
 					</ul>
-					<form class="navbar-form navbar-left pull-right" role="search" action="<?php echo U('/Home/Index/search');?>" method="post">
+					<form class="navbar-form navbar-left pull-right" role="search" action="<?php echo U('/Home/Index/search');?>" method="get">
 						<div class="form-group">
 							<input type="text" name="search_words" class="form-control" placeholder="Search">
 						</div>

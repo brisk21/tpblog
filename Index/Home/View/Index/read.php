@@ -11,6 +11,9 @@
 	   document.write('<script src="' + src + '" id="sozz"><\/script>');
 	})();
 	</script>
+	<style>
+		.content img{width: 100%;}.content,.copylink{word-wrap: break-word;}
+	</style>
 </head>
 <body>
 	<div class="container">		
@@ -30,8 +33,17 @@
 							<span class=" pull-right"><?php echo date('Y-m-d H:s:m',$blog['intime']);?></span>
 						</div>					
 					</div>
-					<div class="panel-body">
+					<div class="panel-body content">
 						<?php echo  html_entity_decode($blog['content']);?>
+					</div>
+					<div class="panel-footer">
+						<div class="copylink">
+								<p style="color:red">
+									转载本文请注明本文来自韦炳生博客。链接地址：
+									<a href="<?php echo U('/Home/Index/read');?>?id=<?php echo $blog['id'];?>"><?php echo $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];?></a>
+									
+								</p>
+						</div>
 					</div>
 					<div class="panel-footer">
 						<div id="sharebox " style="overflow: hidden;" >
@@ -53,7 +65,7 @@
               -->	
 		
 		<div class="siteInfo">
-			<div class="siteInfo" ><?php echo html_entity_decode( $config["copyright"] ); ?></div>	
+			<div class="siteInfo" >&copy;BRISKLAN；备案信息：<a href="http://www.beianbeian.com/beianxinxi/34387c78-91f7-4c20-8400-825cfcf3ddae.html" target="b_link">桂ICP备16004757号-1</a></div>	
 		</div>
 	</div>
 </body>

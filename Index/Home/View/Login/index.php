@@ -41,7 +41,7 @@
 				</form>
 			  </div>
 			  <div class="panel-footer">
-			  	<span>版权归广西科技大学计算机协会所有，盗用必究</span>
+			  	<span>版权归weibingsheng.cn所有，盗用必究</span>
 			  </div>
 		 </div>			
 		</div>

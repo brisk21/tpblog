@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<?php include(THEME_PATH.'Common/header.inc.php');?>
+<?php include(THEME_PATH.'Common/header.mdc.php');?>
 	<style type="text/css">
 		body{background:rgba(190,230,77,.5)}.info{overflow:hidden}.top{margin-top:0;margin-bottom:0}.search{margin-top:10px}.logo{height:50px;margin:-14px}.pagination a,.pagination span{padding:5px;margin:5px;font-size:14px;background:rgba(7,255,139,.31)}.pagination span{background:rgba(232,146,59,.57);color:red}
 	</style>	
@@ -42,8 +42,24 @@
 				</div>
 		
 			</div>
-				<div class="col-md-4 hidden-xs ">
-					<?php include(THEME_PATH.'Common/sidebar.inc.php');?>		
+				<div class="col-md-4 ">
+					<div class="panel panel-success " id="authorinfo">
+						<div class="panel-heading">
+							<h3 class="panel-title">最近文章</h3>
+						</div>
+						<div class="panel-body">
+								<?php foreach( $list as $blog ):?>	
+								<div class="panel panel-info">
+									<div class="panel-heading">
+										<a href="<?php echo U('/Home/Mdc/read');?>?id=<?php echo $blog['id'];?>">
+											<?php echo $blog['title'];?>
+										</a>		
+										<span style="color: green" class="glyphicon glyphicon-hand-left">阅读</span>		
+									</div>					
+								</div>
+								<?php endforeach;?>	
+						</div>
+					</div>
 				</div>				
 		</div>
               <!--

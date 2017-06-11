@@ -48,7 +48,7 @@
 								<td><?php echo date("Y-m-d H:i:s",$mdc['update_time']) ;?></td>
 								<td>
 								<a href="<?php echo U('/Home/Mdc/add');?>?id=<?php echo $mdc['id']; ?>" class="btn btn-primary btn-xs">编辑</a>								
-								<a href="<?php echo U('/Home/Mdc/delete');?>?id=<?php echo $mdc['id']; ?>" class="btn btn-danger btn-xs">删除</a>						
+								<a onclick="return confirm('确定删此项吗？')"  href="<?php echo U('/Home/Mdc/delete');?>?id=<?php echo $mdc['id']; ?>" class="btn btn-danger btn-xs">删除</a>						
 								</td>
 							</tr>
 							 <?php endforeach ; ?>

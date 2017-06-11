@@ -13,6 +13,7 @@
 						<ul class="nav navbar-nav">
 							<li ><a href="<?php echo U('/Home/Blog/index');?>">博客日志管理</a></li>
 							<li ><a href="<?php echo U('/Home/Mdc/index');?>">医学知识管理</a></li>
+							<li ><a href="<?php echo U('/Home/Msg/index');?>">留言管理</a></li>
 							<li><a href="<?php echo U('/Home/Auser/index');?>">管理员管理</a></li>
 							<li><a href="<?php echo U('/Home/Setting/index');?>">基本设置</a></li>						
 						</ul>

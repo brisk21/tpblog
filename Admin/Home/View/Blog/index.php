@@ -32,6 +32,7 @@
 							<tr>
 								<th>id</th>
 								<th>标题</th>
+								<th>分类</th>
 								<th>作者</th>
 								<th>发表时间</th>
 								<th>修改时间</th>
@@ -43,12 +44,13 @@
 							<tr>
 								<td><?php echo $blog['id'];?></td>
 								<td><?php echo $blog['title'];?></td>
+								<td><?php echo $blog['labels'];?></td>
 								<td><?php echo $blog['author'];?></td>								
 								<td><?php echo date("Y-m-d H:i:s",$blog['intime']) ;?></td>
 								<td><?php echo date("Y-m-d H:i:s",$blog['uptime']) ;?></td>
 								<td>
 								<a href="<?php echo U('/Home/Blog/add');?>?id=<?php echo $blog['id']; ?>" class="btn btn-primary btn-xs">编辑</a>								
-								<a href="<?php echo U('/Home/Blog/delete');?>?id=<?php echo $blog['id']; ?>" class="btn btn-danger btn-xs">删除</a>						
+								<a onclick="return confirm('确定删此项吗？')" href="<?php echo U('/Home/Blog/delete');?>?id=<?php echo $blog['id']; ?>" class="btn btn-danger btn-xs">删除</a>						
 								</td>
 							</tr>
 							 <?php endforeach ; ?>

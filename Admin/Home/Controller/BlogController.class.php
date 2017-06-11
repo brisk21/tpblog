@@ -19,35 +19,25 @@ class BlogController extends AdminController {
     	$blog = D('blogs');
     	if(IS_POST){
     		$title = I('post.title');
-    		$author = I('post.author');
+            $author = I('post.author');
+    		$labels = I('post.labels');
     		$keywords = I('post.keywords');
 			$content = I('post.content');
 			$rule = array(
 				array('title','require','标题不能为空'),
-				array('author','require','作者不能为空'),
+                array('author','require','作者不能为空'),
+				array('labels','require','分类不能为空'),
 				array('keywords','require','请输入至少一个关键词'),
 				array('content','require','内容不能为空')
 			);
-            //
-            $upload = new \Think\Upload();// 实例化上传类 
-            $upload->maxSize = 3145728 ;// 设置附件上传大小 
-            $upload->exts = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型 
-            $upload->rootPath = './Uploads/'; // 设置附件上传根目录 
-            $upload->savePath = './Uploads/Files/'; // 设置附件上传（子）目录 // 上传文件 
-            $info = $upload->upload(); 
-            if(!$info) {// 上传错误提示错误信息 
-                $this->error($upload->getError()); 
-            }else{
-            // 上传成功 
-                $this->success('上传成功！haha');
-             }
-            //
+            //            
 			if(!$blog -> validate($rule) -> create()){
 				return $this -> error($blog -> getError());
 			}
 			$insert = array(
 				'title' => $title,
-				'author' => $author,
+                'author' => $author,
+				'labels' => $labels,
 				'keywords' => $keywords,
 				'content' => $content,
 				'intime' => time()				
@@ -70,7 +60,8 @@ class BlogController extends AdminController {
     	$blogs = D('blogs');
     	$blog = array(
     		'id' => 0,
-    		'title' => '',
+            'title' => '',
+    		'labels' => '',
     		'keywords' => '',
     		'author' => '',
     		'content' => ''

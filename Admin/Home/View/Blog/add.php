@@ -34,6 +34,10 @@
 								<input type="text" class="form-control" name="keywords"  id="bkeyword" value="<?php echo $blog['keywords']; ?>" >
 							</div>
 							<div class="form-group">
+								<label for="bkeyword">分类：</label>								
+								<input type="text" class="form-control" name="labels"  id="bkeyword" value="<?php echo $blog['labels']; ?>" >
+							</div>
+							<div class="form-group">
 								<label for="content">内容：</label>
 								<textarea name="content"  id="editor_id" style="width:100%;height:300px;" >
 									<?php echo $blog['content']; ?>
